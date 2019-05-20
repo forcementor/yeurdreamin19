@@ -306,7 +306,7 @@
 				<section data-transition="fade-in fade-out">
 					<h3>code smell</h3>
 					<h6><i>noun</i></h6> 
-					<p><i>a characteristic of source code <br/>suggesting a deeper problem.</i></p>
+					<p><i>a characteristic of source code <br/>suggesting a deeper problem</i></p>
 				</section>
 
 				<section data-transition="fade-in fade-out"
@@ -385,16 +385,15 @@
 				<section data-transition="slide-in fade-out">
 					<h3>clean code</h3>
 					<h6><i>noun</i></h6> 
-					<p><i>code that can be easily understood<br/>
-						and expanded upon by another<br/>
-						programmer with minimal<br/>
-						knowledge transfer, achieved<br/>
-						by consciously using good<br/>
-						design principles and practices.
+					<p><i>code that is understood with<br/>
+						little effort and in a short time<br>
+						<b>- intuitively understandable -</b><br/>
+						achieved by consciously using good<br/>
+						design principles and practices
 					</i></p>	
 				</section>
 
-				<section data-transition="fade-in fade-out"
+ 				<section data-transition="fade-in fade-out"
 					data-background-iframe="https://de.wikipedia.org/wiki/Clean_Code" 
 					data-background-interactive >
 				</section>
@@ -425,7 +424,7 @@
 					<p><i>a design principal<br/>
 						of breaking down code<br/>
 						into distinct sections,<br/>
-						each addressing a concern.</i></p>
+						each addressing a concern</i></p>
 				</section>
 
 				<section data-transition="fade-in fade-out"
@@ -452,7 +451,7 @@
 					<p><i>a set of information, data or logic<br/>
 						that effects some specific<br/>
 						behavior or aspect of<br/>
-						a software application.</i></p>
+						a software application</i></p>
 				</section>
 
 				<section data-transition="fade-in fade-out"
@@ -506,7 +505,9 @@
 				<section data-transition="fade-in fade-out">
 					<h3>software framework</h3>
 					<h6><i>noun</i></h6> 
-					<p><i>a collection of reusable code <br/>that implements a solution to a <br/>common problem in software design.</i></p>
+					<p><i>a collection of reusable code <br/>
+						that implements a solution to a <br/>
+						common problem in software design</i></p>
 				</section>				
 			
 				<section data-transition="fade-in fade-out"
@@ -541,7 +542,9 @@
 				<section data-transition="fade-in fade-out">
 					<h3>software design pattern</h3>
 					<h6><i>noun</i></h6> 
-					<p><i>a reusable solution<br/>to a common problem<br/>in software design.</i></p>
+					<p><i>a reusable solution<br/>
+						to a common problem<br/>
+						in software design</i></p>
 				</section>				
 
 				<section data-transition="fade-in fade-out"
@@ -574,31 +577,9 @@
 					<p>
 						<i>a set of available services<br/>
 						for the	application’s operations<br/>
-						and their responses...</i>
+						and their responses</i>
 					</p>	
-					<p style="visibility:hidden">">
-						<i>In Apex it sets the boundary<br/>
-						between the business logic concerns<br/>
-						in the Service layer and those of the<br/>
-						the calling execution context clients.</i>
-						</p>			
 				</section>				
-
-				<section data-transition="fade-in fade-out">
-					<h3>service layer</h3>
-					<h6><i>noun</i></h6> 
-					<p style="color:grey">
-						<i>a set of available services<br/>
-						for the	application’s operations<br/>
-						and their responses...</i>
-						</p>	
-					<p>
-						<i>In Apex it sets the boundary<br/>
-						between the business logic concerns<br/>
-						in the Service layer and those of the<br/>
-						the calling execution context clients.</i>
-						</p>			
-				</section>
 
      		<section data-transition="fade-in fade-out"
 						data-background-iframe="https://en.wikipedia.org/wiki/Service_layer_pattern" 
@@ -625,7 +606,7 @@
 					<h6>The Service Layer sets the boundary<br/>
 						between the business logic concerns<br/>
 						in the Service Layer and those of the<br/>
-						the calling <i>execution context clients.</i>
+						the calling <i>execution context clients</i>
 					</h6>			
 				</section>
 
@@ -747,7 +728,7 @@ trigger SessionRegistration
 					</h4>
 					<h4 class="fragment fade-in">
 						and host it <br/>
-						somewhere else.<br/>
+						somewhere else<br/>
 					</h4>
 					<h4 class="fragment fade-in">
 						(Heroku, AWS, Azure, etc.) 
@@ -757,9 +738,10 @@ trigger SessionRegistration
 				<section data-transition="fade-in fade-out">
 					<h3>microservice</h3>
 					<h6><i>noun</i></h6> 
-					<p><i>A loosely coupled, fine-grained <br/>and lightweight web service.</i></p>
+					<p><i>A loosely coupled, fine-grained <br/>and lightweight web service</i></p>
 				</section>				
 
+				<!-- Bypass 
 				<section data-transition="fade-in fade-out"
 							data-background-iframe="https://en.wikipedia.org/wiki/Microservices" 
 							data-background-interactive >
@@ -781,21 +763,22 @@ trigger SessionRegistration
 					<h8 class="fragment fade-in-then-semi-out">Do what’s easiest for YOU!</h8><br/>
 					<h8 class="fragment fade-in-then-semi-out">Sync-Async Service vs. Sync-Async Apex callout</h8><br/>
 				</section>
-
-			    <section data-transition="fade-in fade-out">
+				-->	
+				<section data-transition="fade-in fade-out">
 					<h4>Microservice Use Case</h4>
 					<img src="img/microservice_use_case.png"  style="border:none;" height="95%" width="75%"/>
 				</section>
 
-			    <section data-transition="fade-in fade-out">
+				<section data-transition="fade-in fade-out">
 					<img src="img/remittance_process_seq.jpg"  style="border:none;" height="95%" width="95%"/>
 				</section>
 
-			    <section data-transition="fade-in fade-out">
+				<section data-transition="fade-in fade-out">
 					<h4>Async Call Out</h4>
 					<img src="img/microservice_use_case_async.png"  style="border:none;" height="95%" width="95%"/>
 				</section>
 
+				<!--
 				<section data-transition="slide-in fade-out">
 					<h4>MicroserviceManagerDemo Class</h4>
 					<style type="text/css">
@@ -822,12 +805,13 @@ trigger SessionRegistration
 						<img src="img/pdf-convert-git.jpg" style="border:none;" height="95%" width="75%"/>
 					</a>
 				</section>
-
+				-->	
+				
 				<section data-transition="fade-in fade-out">
 					<h4>Mitigate with Mono-Purpose Microservices</h4>
 					<img data-src="img/DonAsMoses.jpg" style="opacity: 1.00" >
 				</section>
-
+				
 				<!--
 				<section data-transition="fade-out">
 					<h4>Mitigate with Mono-Purpose Microservices</h4>
@@ -860,30 +844,30 @@ trigger SessionRegistration
 					<a href="http://bit.ly/SfPlayByPlay22" target="_none"> 
 						<img src="img/peter.jpg" style="border:none;" width="60%" />
 					</a>	
-					<div style="font-size: 35px;">
-						<a href="http://bit.ly/SfPlayByPlay22">
-							<i>http://bit.ly/SfPlayByPlay22</i><p/>
-						</a>	
-					</div>
 				</section>
 	
 				<section data-transition="slide-in fade-out">
-					<h4>Apex SOC Course Channel</h4>
-					<a href="http://bit.ly/ApexSOC" target="_none"> 
-						<img src="img/ApexSocChannel.jpg" style="border:none;" width="60%" />
-					</a>	
-					<div style="font-size: 35px;">
-						<a href="http://bit.ly/ApexSOC" target="_none"> 
-							<i>http://bit.ly/ApexSOC</i><p/>
-						</a>	
-					</div>
+					<h4>Maximize Your Value Through <br/>Salesforce Coding Best Practices</h4>
+					<h8>with Matt Kaufman</h2>
+					<br/>	
+					<a href="https://www.pluralsight.com/courses/play-by-play-maximize-value-through-salesforce-coding-best-practices" target="_none"> 											
+						<img src="img/matt.jpg" style="border:none;" width="60%" />
+					</a>
 				</section>
-
+	
 				<section data-transition="slide-in fade-out">
 					<h4>Adopting Trigger Design Patterns <br/>in Existing Salesforce Orgs</h4>
 					<h8>with Dan Appleman</h2><br/>
 					<a href="https://www.pluralsight.com/courses/play-by-play-adopting-trigger-design-patterns-existing-salesforce-orgs" target="_none"> 						
 						<img src="img/dan.jpg" style="border:none;" width="60%" />
+					</a>							
+				</section>
+
+				<section data-transition="slide-in fade-out">
+					<h4>Automated Code Analysis in<br/>Salesforce - a Tools Deep Dive</h4>
+					<h8>with Lorenzon Frattini and Robert Sösemann</h2><br/>
+					<a href="https://www.pluralsight.com/courses/play-by-play-automated-code-analysis-in-salesforce" target="_none"> 						
+						<img src="img/LorenzoRobert.jpg" style="border:none;" width="60%" />
 					</a>							
 				</section>
 
@@ -897,15 +881,6 @@ trigger SessionRegistration
 				</section>
 	
 				<section data-transition="slide-in fade-out">
-					<h4>Maximize Your Value Through <br/>Salesforce Coding Best Practices</h4>
-					<h8>with Matt Kaufman</h2>
-					<br/>	
-					<a href="https://www.pluralsight.com/courses/play-by-play-maximize-value-through-salesforce-coding-best-practices" target="_none"> 											
-						<img src="img/matt.jpg" style="border:none;" width="60%" />
-					</a>
-				</section>
-	
-				<section data-transition="slide-in fade-out">
 					<h4>Understanding Heroku Myths and Magic</h4>
 					<h8>with Lyric Hartley</h2>
 					<br/>	
@@ -915,7 +890,26 @@ trigger SessionRegistration
 				</section>
 	
 				<section >
-					<h4>Follow the<br/>
+					<h4>Follow the Salesforce Play By Play<br/>
+						series on Pluralsight<br/>
+					</h4>
+					<a href="https://www.pluralsight.com/profile/author/don-robins" target="_none">
+						<img src="img/AuthorPage.jpg" style="border:none;" width="60%" />
+					</a>
+					<a href="https://www.pluralsight.com/profile/author/don-robins" target="_none">
+						<h8>https://www.pluralsight.com/profile/author/don-robins</h8>
+					</a>	
+				</section>
+
+				<section data-transition="slide-in fade-out">
+					<h4>Many courses have a Course Channel</h4>
+					<a href="http://bit.ly/ApexSOC" target="_none"> 
+						<img src="img/ApexSocChannel.jpg" style="border:none;" width="60%" />
+					</a>	
+				</section>
+
+				<section >
+					<h4>You can also follow the<br/>
 					Salesforce Play By Play<br/>
 					Playlist on Youtube</h4>
 					<a href="http://bit.ly/sfplaybyplaylist" target="_none">
@@ -934,7 +928,7 @@ trigger SessionRegistration
 						<li>Keep on learning</li>
 						<li>Share with your Ohana</li>
 					</ul>
-					<br/><br/>
+					<br/>
 					<p>
 						This presentation is on Github here:
 						<img src="img/cactusforce19qr.png"  style="border:none;" height="25%" width="25%" align="right" />
