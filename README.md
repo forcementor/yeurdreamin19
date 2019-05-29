@@ -3,8 +3,8 @@
 <h3>
 Notes for development in VSCode
 </h3>
-- Launch the local server on port 3000:
->$ node serve.js
+- Launch the local server on port 3000:<br/>
+node serve.js
 
 
 <hr/>
