@@ -1,0 +1,337 @@
+
+<!doctype html>
+<html lang="en-US">
+    <head>
+		<meta name="google-site-verification" content="eZTWCPiZGMWv_kBKI1mfEOS8lsdJjntT89lAtHvqpgE" />
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <!--[if IE]>
+        <meta name="X-UA-Compatible" content="IE=edge" >
+        <![endif]-->
+        <title>Embracing Modular Development Patterns in Apex (or Eluding Mondo Mania) - YeurDreamin&#039; YeurDreamin&#039;</title>
+        <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://www.yeurdreamin.eu/wp-content/themes/Tyler/css/ie8.css" />
+        <![endif]-->
+        <!--[if lte IE 7]>
+        <link rel="stylesheet" href="https://www.yeurdreamin.eu/wp-content/themes/Tyler/css/bootstrap-ie7.css" />
+        <style type="text/css">
+            .col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12,.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12,.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12,.input-group,.row,.content{
+                box-sizing:border-box;behavior:url(https://www.yeurdreamin.eu/wp-content/themes/Tyler/js/boxsizing.htc)
+            }
+        </style>
+        <link rel="stylesheet" href="https://www.yeurdreamin.eu/wp-content/themes/Tyler/css/ie7.css" />
+        <![endif]-->
+        <!-- HTML5 Shim, Respond.js and PIE.htc IE8 support of HTML5 elements, media queries and CSS3 -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <style type="text/css">
+            .speakers .speaker .speaker-inner, .speakers .photo img, .connect, .sessions .session .speaker img,
+            .connect .links a:hover:before, .sessions .session .session-inner, .location .explore, .location .map,
+            .articles article .image, .facebook .fb-event, .facebook .fb-view, .twitter .view, .twitter .tweet,
+            .sidebar .widget_latest_comments li a,.sidebar h2, .articles article .image, .comments-area h2,
+            .commentlist .comment .comment-content,.commentlist .comment .comment-content:after,
+            .timecounter, input[type=text], textarea, .landing .box, h1 img.img-circle {
+                behavior: url("https://www.yeurdreamin.eu/wp-content/themes/Tyler/js/pie/PIE.htc");
+            }
+        </style>
+        <![endif]-->
+        
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" type="text/javascript">//<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+//]]>
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><!-- Jetpack Site Verification Tags -->
+
+<!-- This site is optimized with the Yoast SEO plugin v11.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://www.yeurdreamin.eu/sessions/embracing-modular-development-patterns-in-apex-or-eluding-mondo-mania/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Embracing Modular Development Patterns in Apex (or Eluding Mondo Mania) - YeurDreamin&#039;" />
+<meta property="og:description" content="As Salesforce developers, we all too often come across ‘Mondo’ coding patterns in existing Apex classes and triggers. Apex is a fully functional and modern object oriented programming language, yet programmers often fail to utilize its capabilities that allow for well designed clean and segmented code. Instead, they often fall prey to this common yet &hellip;" />
+<meta property="og:url" content="https://www.yeurdreamin.eu/sessions/embracing-modular-development-patterns-in-apex-or-eluding-mondo-mania/" />
+<meta property="og:site_name" content="YeurDreamin&#039;" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="As Salesforce developers, we all too often come across ‘Mondo’ coding patterns in existing Apex classes and triggers. Apex is a fully functional and modern object oriented programming language, yet programmers often fail to utilize its capabilities that allow for well designed clean and segmented code. Instead, they often fall prey to this common yet [&hellip;]" />
+<meta name="twitter:title" content="Embracing Modular Development Patterns in Apex (or Eluding Mondo Mania) - YeurDreamin&#039;" />
+<meta name="twitter:site" content="@yeurdreamin" />
+<meta name="twitter:creator" content="@yeurdreamin" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.yeurdreamin.eu/#organization","name":"Yeurdreamin'","url":"https://www.yeurdreamin.eu/","sameAs":["https://www.linkedin.com/company/yeurdreamin/","https://twitter.com/yeurdreamin"],"logo":{"@type":"ImageObject","@id":"https://www.yeurdreamin.eu/#logo","url":"https://i0.wp.com/www.yeurdreamin.eu/wp-content/uploads/2018/12/YeurDreaminLogo-benelux.png?fit=604%2C195&ssl=1","width":604,"height":195,"caption":"Yeurdreamin'"},"image":{"@id":"https://www.yeurdreamin.eu/#logo"}},{"@type":"WebSite","@id":"https://www.yeurdreamin.eu/#website","url":"https://www.yeurdreamin.eu/","name":"YeurDreamin&#039;","publisher":{"@id":"https://www.yeurdreamin.eu/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://www.yeurdreamin.eu/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://www.yeurdreamin.eu/sessions/embracing-modular-development-patterns-in-apex-or-eluding-mondo-mania/#webpage","url":"https://www.yeurdreamin.eu/sessions/embracing-modular-development-patterns-in-apex-or-eluding-mondo-mania/","inLanguage":"en-US","name":"Embracing Modular Development Patterns in Apex (or Eluding Mondo Mania) - YeurDreamin&#039;","isPartOf":{"@id":"https://www.yeurdreamin.eu/#website"},"datePublished":"2019-04-10T16:35:17+00:00","dateModified":"2019-07-16T21:09:08+00:00"}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.yeurdreamin.eu\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.yeurdreamin.eu/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='tyler-google-font-css'  href='//fonts.googleapis.com/css?family=Ubuntu%3A300%2C400%2C500%2C700&#038;ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='tyler-bootstrap-css'  href='https://www.yeurdreamin.eu/wp-content/themes/Tyler/css/bootstrap.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='tyler-blueimp-gallery-css'  href='https://www.yeurdreamin.eu/wp-content/themes/Tyler/css/blueimp-gallery.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='tyler-jquery-scrollpane-css'  href='https://www.yeurdreamin.eu/wp-content/themes/Tyler/css/jquery.scrollpane.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='tyler-icons-css'  href='https://www.yeurdreamin.eu/wp-content/themes/Tyler/css/icon.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='tyler-layout-css'  href='https://www.yeurdreamin.eu/wp-content/themes/Tyler/css/layout.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='tyler-layout-mobile-css'  href='https://www.yeurdreamin.eu/wp-content/themes/Tyler/css/layout-mobile.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='tyler-style-css'  href='https://www.yeurdreamin.eu/wp-content/themes/Tyler/style.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='forget-about-shortcode-buttons-css'  href='https://www.yeurdreamin.eu/wp-content/plugins/forget-about-shortcode-buttons/public/css/button-styles.css?ver=2.1.2' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='https://www.yeurdreamin.eu/wp-content/plugins/jetpack/css/jetpack.css?ver=7.3.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.yeurdreamin.eu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.yeurdreamin.eu/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://www.yeurdreamin.eu/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.9.2'></script>
+<link rel='https://api.w.org/' href='https://www.yeurdreamin.eu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.yeurdreamin.eu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.yeurdreamin.eu/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.2.2" />
+<link rel="alternate" type="application/json+oembed" href="https://www.yeurdreamin.eu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.yeurdreamin.eu%2Fsessions%2Fembracing-modular-development-patterns-in-apex-or-eluding-mondo-mania%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.yeurdreamin.eu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.yeurdreamin.eu%2Fsessions%2Fembracing-modular-development-patterns-in-apex-or-eluding-mondo-mania%2F&#038;format=xml" />
+<!-- <meta name="NextGEN" version="3.2.4" /> -->
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" type="text/javascript">//<![CDATA[
+	dataLayer.push({"pagePostType":"session","pagePostType2":"single-session","pagePostAuthor":"Jan Vandevelde"});//]]>
+</script>
+<script data-cfasync="false">//<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KXQPK22');//]]>
+</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+<link rel='dns-prefetch' href='//v0.wordpress.com'/>
+<link rel='dns-prefetch' href='//i0.wp.com'/>
+<link rel='dns-prefetch' href='//i1.wp.com'/>
+<link rel='dns-prefetch' href='//i2.wp.com'/>
+<style type='text/css'>img#wpstats{display:none}</style>
+
+
+
+<style>
+        @media only screen and (max-width: 375px){
+        
+            .wrapper-with-intrinsic-ratio {
+                position: relative;
+                padding-bottom: 56.25%;
+            }
+            
+            .element-to-stretch iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            
+        }
+
+        @media only screen and (min-width: 375px){
+
+            .wrapper-with-intrinsic-ratio {
+                position: relative;
+                padding-bottom: 56.25%;
+            }
+
+            .element-to-stretch iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+        } 
+
+    </style>
+
+
+
+
+
+    <script type="text/javascript">
+
+        var ajaxurl = 'https://www.yeurdreamin.eu/wp-admin/admin-ajax.php';
+        var pois = [];
+        var poi_marker = 'https://www.yeurdreamin.eu/wp-content/themes/Tyler/images/schemes/basic/icon-map-pointer.png';
+        var contact_missingfield_error = "Sorry! You've entered an invalid email.";
+        var contact_wrongemail_error = "This field must be filled out.";
+    </script><style type="text/css"></style><link rel="icon" href="https://i2.wp.com/www.yeurdreamin.eu/wp-content/uploads/2018/04/cropped-icon.png?fit=32%2C32&#038;ssl=1" sizes="32x32" />
+<link rel="icon" href="https://i2.wp.com/www.yeurdreamin.eu/wp-content/uploads/2018/04/cropped-icon.png?fit=192%2C192&#038;ssl=1" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://i2.wp.com/www.yeurdreamin.eu/wp-content/uploads/2018/04/cropped-icon.png?fit=180%2C180&#038;ssl=1" />
+<meta name="msapplication-TileImage" content="https://i2.wp.com/www.yeurdreamin.eu/wp-content/uploads/2018/04/cropped-icon.png?fit=270%2C270&#038;ssl=1" />
+    </head>
+    <body class="session-template-default single single-session postid-522">
+        <header class="nav transition">
+            <a href="https://www.yeurdreamin.eu" id="logo">
+                <img src="https://www.yeurdreamin.eu/wp-content/uploads/2018/03/YeurDreaminLogo-benelux.png" alt="Logo YeurDreamin&#039;" title="YeurDreamin&#039;" />
+            </a>
+            <nav class="navbar" role="navigation">
+                <!-- mobile navigation -->
+                <div class="navbar-header visible-sm visible-xs">
+                    <button type="button" class="btn btn-primary navbar-toggle" data-toggle="collapse" data-target="#tyler-navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="icon-header"></i>
+                    </button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse text-fit" id="tyler-navigation">
+                    <div class="menu-top-menu-container"><ul id="menu-primary" class="transition"><li id="menu-item-68" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-68"><a href="http://www.yeurdreamin.eu">Home</a></li>
+<li id="menu-item-593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-593"><a href="https://www.yeurdreamin.eu/yeurdreamin-speaker-schedule/">Schedule</a></li>
+<li id="menu-item-70" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70"><a href="https://www.yeurdreamin.eu/category/blog/">Blog</a></li>
+<li id="menu-item-1074" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1074"><a href="https://www.yeurdreamin.eu/photos-yeurdreamin-2019/">Photos</a>
+<ul class="sub-menu">
+	<li id="menu-item-1069" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1069"><a href="https://www.yeurdreamin.eu/photos-yeurdreamin-2019/">YeurDreamin&#8217; 2019</a></li>
+</ul>
+</li>
+<li id="menu-item-141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141"><a href="https://www.yeurdreamin.eu/about-us/">About Us</a></li>
+<li id="menu-item-168" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-168"><a href="https://www.yeurdreamin.eu/our-sponsors/">Our Sponsors</a></li>
+<li id="menu-item-489" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-489"><a href="https://www.yeurdreamin.eu/faq/">FAQ</a></li>
+<li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66"><a href="https://www.yeurdreamin.eu/contact/">Contact</a></li>
+</ul></div>                </div>
+            </nav>
+        </header>
+
+        <div class="heading">
+            <div class="container">
+                <h1>
+                    Embracing Modular Development Patterns in Apex (or Eluding Mondo Mania)                </h1>
+
+                                
+                                
+                <div class="nav">
+                    <a href="https://www.yeurdreamin.eu/sessions/behind-every-device-is-a-customer-learn-how-to-connect-iot-devices-to-salesforce/" rel="prev" title="Behind Every Device is a Customer. Learn how to connect IoT devices to Salesforce."><i class="icon-angle-left"></i></a>                                            <a href="https://www.yeurdreamin.eu/yeurdreamin-speaker-schedule/" title="All"><i class="icon-th-large"></i></a>
+                                        <a href="https://www.yeurdreamin.eu/sessions/set-up-continuous-integration-using-salesforcedx-and-jenkins/" rel="next" title="Set up Continuous Integration using SalesforceDX and Jenkins"><i class="icon-angle-right"></i></a>                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <p>
+                            </p>
+            <div class="row">
+                <div class="col-md-8">
+                    <p>As Salesforce developers, we all too often come across ‘Mondo’ coding patterns in existing Apex classes and triggers. Apex is a fully functional and modern object oriented programming language, yet programmers often fail to utilize its capabilities that allow for well designed clean and segmented code. Instead, they often fall prey to this common yet risky coding approach which typically results in lengthy, overly complex and fragile classes and triggers.</p>
+                    <p>In this presentation, we’ll discuss why it’s important to avoid or refactor away from these ubiquitous ‘Mondo’ coding patterns, and we’ll explore how to embrace the concept of modular development patterns to help isolate, simplify and decouple business logic, resulting in cleaner, more readable and hence more maintainable code.</p>
+                    <p>Along the way, we’ll clarify the difference between Software Frameworks versus Software Design Patterns, review the benefits of a Separation of Concerns development approach, and show how to implement modular architecture in Apex.</p>
+                    <p>We&#8217;ll also show how to leverage external micro services running on Heroku that provide extended functionality not available in Apex, and leave attendees with some homework and pointers to documentation, posts, Trailhead content and expert elearning videos for lots of self directed further learning.</p>
+                    <br/>
+                    <br/>
+                    <!--<iFrame src ="https://forcementor.github.io/yeurdreamin19/#/" width="940" height="700" scrolling ="yes" align ="center"></iFrame> -->
+                    
+                    <div class="wrapper-with-intrinsic-ratio">
+                            <div class="element-to-stretch">
+                                <iFrame src ="https://forcementor.github.io/yeurdreamin19/#/" scrolling ="yes" align ="center"></iFrame>
+                            </div>
+                    </div>
+
+                    <!-- AddThis Button BEGIN -->
+                    <p class="clearfix"></p>
+                    <!-- AddThis Button END -->
+                    <div style="padding:1em 0">
+
+                        
+                                                    <span class="single-session-link btn btn-primary" >Developer Trailblazers</span>
+                                            </div>
+                </div>
+
+                <div class="col-md-4 sessions single">
+                    <div class="session">
+                        <span class="location">Location: <strong>Astro's Room</strong></span>
+                        <span class="date">Date: <strong>14/06/2019</strong></span>
+                        <span class="time">Time: <strong>16:10 - 16:50</strong></span>
+                        <span class="speakers-thumbs">
+                                                                <a href = "https://www.yeurdreamin.eu/speakers/don-robins/" class="speaker">
+                                        <img width="480" height="535" src="https://www.yeurdreamin.eu/wp-content/uploads/2019/04/donrobins.jpeg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" title="Don Robins" srcset="https://i0.wp.com/www.yeurdreamin.eu/wp-content/uploads/2019/04/donrobins.jpeg?w=480&amp;ssl=1 480w, https://i0.wp.com/www.yeurdreamin.eu/wp-content/uploads/2019/04/donrobins.jpeg?resize=269%2C300&amp;ssl=1 269w, https://i0.wp.com/www.yeurdreamin.eu/wp-content/uploads/2019/04/donrobins.jpeg?resize=190%2C212&amp;ssl=1 190w, https://i0.wp.com/www.yeurdreamin.eu/wp-content/uploads/2019/04/donrobins.jpeg?resize=220%2C245&amp;ssl=1 220w, https://i0.wp.com/www.yeurdreamin.eu/wp-content/uploads/2019/04/donrobins.jpeg?resize=212%2C236&amp;ssl=1 212w, https://i0.wp.com/www.yeurdreamin.eu/wp-content/uploads/2019/04/donrobins.jpeg?resize=169%2C188&amp;ssl=1 169w, https://i0.wp.com/www.yeurdreamin.eu/wp-content/uploads/2019/04/donrobins.jpeg?resize=384%2C428&amp;ssl=1 384w, https://i0.wp.com/www.yeurdreamin.eu/wp-content/uploads/2019/04/donrobins.jpeg?resize=349%2C389&amp;ssl=1 349w" sizes="(max-width: 480px) 100vw, 480px" />                                        <span class="name"><span class="text-fit">Don Robins</span></span>
+                                    </a>
+                                                            </span>
+                    </div>
+                </div>
+            </div>
+                    </div>
+        
+
+<footer>
+    <div class="container">
+        <div class="row row-sm">
+            <div class="col col-md-4"><div><div
+	class="hide-on-button"
+	data-hide-timeout="30"
+	data-consent-expiration="180"
+	id="eu-cookie-law"
+>
+	<form method="post">
+		<input type="submit" value="Close and accept" class="accept" />
+	</form>
+
+	Privacy &amp; Cookies: This site uses cookies. By continuing to use this website, you agree to their use. <br />
+To find out more, including how to control cookies, see here:
+	<a href="https://www.yeurdreamin.eu/privacy-policy" >
+		Cookie Policy	</a>
+</div>
+</div></div>        </div>
+    </div>
+    <div class="credits">
+        © YeurDreamin' This site is not affiliated to nor managed by Salesforce.com.        <div class="footer-tyler-event pbs">
+        	Powered by <a href="http://eventmanagerblog.com/event-wordpress-theme-tyler">Powered by Tyler by Showthemes</a>
+        </div>
+    </div>
+</footer>
+<!-- ngg_resource_manager_marker --><script type='text/javascript' src='https://www.yeurdreamin.eu/wp-content/plugins/mailchimp-wp/assets/pagecount.min.js?ver=2.4.0'></script>
+<script type='text/javascript' src='https://www.yeurdreamin.eu/wp-content/plugins/jetpack/_inc/build/photon/photon.min.js?ver=20190201'></script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201929'></script>
+<script type='text/javascript' src='https://www.yeurdreamin.eu/wp-content/themes/Tyler/js/bootstrap.min.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.yeurdreamin.eu/wp-content/themes/Tyler/js/blueimp-gallery.min.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.yeurdreamin.eu/wp-content/themes/Tyler/js/jquery.mousewheel.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.yeurdreamin.eu/wp-content/themes/Tyler/js/jquery.jscrollpane.min.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.yeurdreamin.eu/wp-content/themes/Tyler/js/main.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.yeurdreamin.eu/wp-includes/js/comment-reply.min.js?ver=5.2.2'></script>
+<script type='text/javascript' src='https://www.yeurdreamin.eu/wp-content/plugins/jetpack/_inc/build/widgets/eu-cookie-law/eu-cookie-law.min.js?ver=20180522'></script>
+<script type='text/javascript' src='https://www.yeurdreamin.eu/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXQPK22"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><script type='text/javascript' src='https://stats.wp.com/e-201929.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:7.3.1',blog:'144499020',post:'522',tz:'2',srv:'www.yeurdreamin.eu'} ]);
+	_stq.push([ 'clickTrackerInit', '144499020', '522' ]);
+</script>
+
+<!-- SCROLL UP BTN -->
+<a href="#" id="scroll-up">UP</a>
+
+<!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>
+
+<!-- backdrop -->
+<div id="backdrop"></div>
+
+</body>
+</html>
